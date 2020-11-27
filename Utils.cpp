@@ -9,6 +9,12 @@
 //	return exp(2 * x);
 //}
 
+double utils::max_error(double max_error, double error) {
+	if (abs(error) > max_error)
+		return abs(error);
+	return max_error;
+};
+
 double utils::calc_func_1(double x, double y1, double y2, parameter param /* =0 */)
 {
 	return y2;

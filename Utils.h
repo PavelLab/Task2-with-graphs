@@ -21,6 +21,7 @@ namespace utils
 	//
 	// User defined functions
 	//
+	double max_error(double max_error, double error);
 	double calc_func_1(double x, double y1, double y2, parameter param /* =0 */);
 	double calc_func_2(double x, double y1, double y2, parameter param /* =0 */);
 

@@ -92,6 +92,8 @@ namespace Graph {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Label^ label11;
 
 
 
@@ -125,6 +127,14 @@ namespace Graph {
 			this->zedGraphControl1 = (gcnew ZedGraph::ZedGraphControl());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->X = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->function = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->NM_function = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -149,14 +159,8 @@ namespace Graph {
 			this->step_control = (gcnew System::Windows::Forms::CheckBox());
 			this->initial_iter = (gcnew System::Windows::Forms::TextBox());
 			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->X = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->function = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->NM_function = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -201,6 +205,65 @@ namespace Graph {
 			this->dataGridView1->RowHeadersWidth = 49;
 			this->dataGridView1->Size = System::Drawing::Size(756, 402);
 			this->dataGridView1->TabIndex = 2;
+			// 
+			// X
+			// 
+			this->X->HeaderText = L"X";
+			this->X->MinimumWidth = 6;
+			this->X->Name = L"X";
+			this->X->ReadOnly = true;
+			this->X->Width = 50;
+			// 
+			// function
+			// 
+			this->function->HeaderText = L"u";
+			this->function->MinimumWidth = 6;
+			this->function->Name = L"function";
+			this->function->ReadOnly = true;
+			this->function->Width = 120;
+			// 
+			// NM_function
+			// 
+			this->NM_function->HeaderText = L"u\'";
+			this->NM_function->MinimumWidth = 6;
+			this->NM_function->Name = L"NM_function";
+			this->NM_function->ReadOnly = true;
+			this->NM_function->Width = 120;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"u2";
+			this->Column1->MinimumWidth = 6;
+			this->Column1->Name = L"Column1";
+			this->Column1->Width = 125;
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"h";
+			this->Column2->MinimumWidth = 6;
+			this->Column2->Name = L"Column2";
+			this->Column2->Width = 70;
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"err_est";
+			this->Column5->MinimumWidth = 6;
+			this->Column5->Name = L"Column5";
+			this->Column5->Width = 125;
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"c1*";
+			this->Column3->MinimumWidth = 6;
+			this->Column3->Name = L"Column3";
+			this->Column3->Width = 50;
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"c2/";
+			this->Column4->MinimumWidth = 6;
+			this->Column4->Name = L"Column4";
+			this->Column4->Width = 50;
 			// 
 			// label1
 			// 
@@ -432,70 +495,31 @@ namespace Graph {
 			this->label10->TabIndex = 31;
 			this->label10->Text = L"max Iter";
 			// 
-			// X
+			// textBox4
 			// 
-			this->X->HeaderText = L"X";
-			this->X->MinimumWidth = 6;
-			this->X->Name = L"X";
-			this->X->ReadOnly = true;
-			this->X->Width = 50;
+			this->textBox4->Location = System::Drawing::Point(1193, 489);
+			this->textBox4->Margin = System::Windows::Forms::Padding(4);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(180, 22);
+			this->textBox4->TabIndex = 32;
 			// 
-			// function
+			// label11
 			// 
-			this->function->HeaderText = L"u";
-			this->function->MinimumWidth = 6;
-			this->function->Name = L"function";
-			this->function->ReadOnly = true;
-			this->function->Width = 120;
-			// 
-			// NM_function
-			// 
-			this->NM_function->HeaderText = L"u\'";
-			this->NM_function->MinimumWidth = 6;
-			this->NM_function->Name = L"NM_function";
-			this->NM_function->ReadOnly = true;
-			this->NM_function->Width = 120;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"u2";
-			this->Column1->MinimumWidth = 6;
-			this->Column1->Name = L"Column1";
-			this->Column1->Width = 125;
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"h";
-			this->Column2->MinimumWidth = 6;
-			this->Column2->Name = L"Column2";
-			this->Column2->Width = 70;
-			// 
-			// Column5
-			// 
-			this->Column5->HeaderText = L"err_est";
-			this->Column5->MinimumWidth = 6;
-			this->Column5->Name = L"Column5";
-			this->Column5->Width = 125;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"c1*";
-			this->Column3->MinimumWidth = 6;
-			this->Column3->Name = L"Column3";
-			this->Column3->Width = 50;
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"c2/";
-			this->Column4->MinimumWidth = 6;
-			this->Column4->Name = L"Column4";
-			this->Column4->Width = 50;
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(1122, 492);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(63, 17);
+			this->label11->TabIndex = 33;
+			this->label11->Text = L"Error est";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1514, 612);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->textBox4);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->initial_iter);
 			this->Controls->Add(this->step_control);
@@ -546,7 +570,7 @@ namespace Graph {
 		double xmax = Convert::ToDouble(textBox2->Text);
 
 		double step = Convert::ToDouble(textBox3->Text);
-
+		double max_E=0;
 
 		double xmin_limit = xmin - 0.1;
 		double xmax_limit = xmax + 0.1;
@@ -605,11 +629,13 @@ namespace Graph {
 			//Добавление на график
 			/*f1_list->Add(x, y_function_1);*/
 			if (checkBox1->Checked)
-				u_der_u_list->Add(y1, y2);
+				u_der_u_list->Add(y1_next, y2_next);
 			if (checkBox2->Checked)
-				u_x_list->Add(xmin, y1);
+				u_x_list->Add(xmin, y1_next);
 			if (checkBox3->Checked)
-				u_der_x_list->Add(xmin, y2);
+				u_der_x_list->Add(xmin, y2_next);
+
+			max_E = utils::max_error(max_E, new_point[7]);
 
 			//Печать в таблицу
 			dataGridView1->Rows->Add();
@@ -630,6 +656,8 @@ namespace Graph {
 			i++;
 		}
 
+		textBox4->Text = Convert::ToString(max_E);
+		
 		LineItem Curve1 = panel->AddCurve("u'(u)", u_der_u_list, Color::Red,SymbolType::None);
 		LineItem^ Curve2 = panel->AddCurve("u(x)", u_x_list, Color::Blue, SymbolType::None);
 		LineItem^ Curve3 = panel->AddCurve("u'(x)", u_der_x_list, Color::Green, SymbolType::None);
